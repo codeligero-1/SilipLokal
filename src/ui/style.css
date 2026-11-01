@@ -47,6 +47,7 @@
 }
 
 /* signup page */
+ /* trying to style na mag switch ang login page to signup page sa isa lng ka page or something */
 .sign-page {
   background: #ffe8d6; 
 }
@@ -82,4 +83,14 @@
   background: #f4a261;
   color: #fff;
 ...
+}
+
+/*about page*/
+.about-page {
+  background: #ffe8d6; 
+}
+.about-page h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 32px;
 }
