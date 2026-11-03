@@ -8,9 +8,60 @@
         <title>SilipLokal</title>
     </head>
     <body>
-        <header id="header"></header>
-        <main id="app"></main>
-        <footer id="footer"></footer>
-        <script src="src/script/headerFooter.js"></script>
+        <!-- Header -->
+        <header id="header">
+            <nav>
+                <img src="../images/logo.png" alt="SilipLokal Logo" class="logo">
+                <a href="#home" data-page="home">SilipLokal</a>
+                <a href="#home" data-page="home">Home</a>
+                <a href="#aboutus" data-page="about">About</a>
+                <a href="#catalogue" data-page="catalogue">Catalogue</a>
+                <a href="#flea" data-page="flea">Flea Markets</a>
+                <a href="#community" data-page="community">Community</a>
+                <select id="theme">
+                    <option value="light">Light Mode</option>
+                    <option value="dark">Dark Mode</option>
+                </select>
+                <a href="#login" data-page="login">Login</a>
+            </nav>
+        </header>
+        
+        <!-- Main Content -->
+        <main id="app">
+            <div class="loader-container">
+                <img
+                    src="assets/loader-icon.png"    
+                    alt="Loading..." 
+                    class="loader-icon"
+                >
+                <p>Loading...</p>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer id="footer">
+            <div>
+                <p>SilipLokal</p>
+                <img src="fb.png" alt="facebook" class="fb"><a href="https://www.facebook.com/SilipLokal" target="_blank"></a>
+                <img src="ig.png" alt="instagram" class="ig"><a href="https://www.instagram.com/SilipLokal" target="_blank"></a>
+                <img src="email.png" alt="email" class="email"><a href="mailto:info@siliplokal.com"></a>
+            </div>
+                <p>&copy; 2026 SilipLokal. All rights reserved.</p>
+            <div>
+                <ul>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="terms.html">Terms and Conditions</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+            <div>
+                <p>Contact Us</p>
+                <p>Phone: +63 912 345 6789</p>
+                <p>Email: info@siliplokal.com</p>
+            </div>
+        </footer>
+
+        <script src="script/app.js"></script>
     </body>
 </html>
