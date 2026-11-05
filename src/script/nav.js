@@ -8,7 +8,7 @@ const themeLabel = document.getElementById("themeLabel");
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 const mobileNavigation = window.matchMedia("(max-width: 768px)");
-const pageNames = ["home", "about", "catalogue", "flea", "community", "login", "signup"];
+const pageNames = ["home", "about", "faq", "terms", "catalogue", "flea", "community", "login", "signup"];
 
 function setMenuOpen(isOpen) {
     navMenu.classList.toggle("is-open", isOpen);

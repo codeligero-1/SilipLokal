@@ -3,6 +3,8 @@ const pagesDirectory = new URL("../pages/", document.currentScript.src);
 const pages = {
     home: "home",
     about: "aboutus",
+    faq: "faq",
+    terms: "terms",
     catalogue: "catalogue",
     flea: "flea",
     community: "community",
