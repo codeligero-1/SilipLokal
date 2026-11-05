@@ -19,6 +19,7 @@
             <div class="category-card"></div>
         </div>
     </div>
+
     <section class="second-section featured-brands" id="featured-brands" data-featured-brands aria-labelledby="featured-brands-title">
         <h2 id="featured-brands-title">Take a Peek at Local Brands!</h2>
         <div class="brand-gallery" data-brand-gallery role="group" aria-label="Choose a featured brand"></div>
@@ -32,12 +33,35 @@
             </button>
         </div>
     </section>
-    <div class="third-section">
-        <h2>Popular</h2>
-        <!-- add images of popular local brands -->
-         <h2>Reviews</h2>
-        <!-- add reviews of local brands -->
-    </div>
+
+    <section class="home-showcase" data-home-showcase aria-label="Popular products and customer reviews">
+        <div class="showcase-section popular-section" aria-labelledby="popular-title">
+            <h2 class="showcase-heading" id="popular-title"><span>Popular</span></h2>
+            <div class="showcase-carousel product-carousel" data-product-carousel role="region" aria-label="Popular local products">
+                <div class="showcase-track product-track" data-product-track></div>
+                <button class="showcase-arrow showcase-next" type="button" data-product-next aria-label="Show more popular products">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7m7-7H3"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="showcase-section reviews-section" aria-labelledby="reviews-title">
+            <h2 class="showcase-heading" id="reviews-title"><span>Reviews</span></h2>
+            <div class="showcase-carousel review-carousel" data-review-carousel role="region" aria-label="Customer reviews">
+                <div class="showcase-track review-track" data-review-track></div>
+                <button class="showcase-arrow showcase-next" type="button" data-review-next aria-label="Show more customer reviews" disabled>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7m7-7H3"></path></svg>
+                </button>
+            </div>
+        </div>
+        <dialog class="review-dialog" data-review-dialog aria-labelledby="review-dialog-title">
+            <form method="dialog">
+                <button class="review-dialog-close" aria-label="Close review">×</button>
+            </form>
+            <div data-review-dialog-content></div>
+        </dialog>
+    </section>
+    
     <div class="fourth-section">
         <h3>About SilipLokal</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
