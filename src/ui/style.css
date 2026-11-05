@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
 }
-
+/*TODO: find a color palette for light mode*/
 :root {
   color-scheme: light;
   --page-background: #fffaf6;
@@ -14,7 +14,7 @@
   --border-color: #f3c9a8;
   --menu-shadow: 0 0.75rem 2rem rgba(47, 41, 36, 0.16);
 }
-
+/*TODO: fix dark mode*/
 [data-theme="dark"] {
   color-scheme: dark;
   --page-background: #211f1d;
