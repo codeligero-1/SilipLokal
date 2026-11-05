@@ -5,7 +5,31 @@ const themePicker = document.querySelector(".theme-picker");
 const themeToggle = document.getElementById("themeToggle");
 const themeMenu = document.getElementById("themeMenu");
 const themeLabel = document.getElementById("themeLabel");
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+const mobileNavigation = window.matchMedia("(max-width: 768px)");
 const pageNames = ["home", "about", "catalogue", "flea", "community", "login", "signup"];
+
+function setMenuOpen(isOpen) {
+    navMenu.classList.toggle("is-open", isOpen);
+    navMenu.setAttribute("aria-hidden", String(!isOpen));
+    navMenu.inert = !isOpen;
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+}
+
+function updateNavigationLayout() {
+    if (mobileNavigation.matches) {
+        setMenuOpen(menuToggle.getAttribute("aria-expanded") === "true");
+        return;
+    }
+
+    navMenu.classList.remove("is-open");
+    navMenu.setAttribute("aria-hidden", "false");
+    navMenu.inert = false;
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation menu");
+}
 
 function moveNavIndicator(link) {
     if (!link || !navIndicator) {
@@ -85,7 +109,14 @@ document.addEventListener("click", event => {
     event.preventDefault();
     history.pushState({ page }, "", `#${page}`);
     setCurrentPage(page);
+    if (mobileNavigation.matches) {
+        setMenuOpen(false);
+    }
     window.loadPage(page);
+});
+
+menuToggle?.addEventListener("click", () => {
+    setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
 });
 
 navLinks?.addEventListener("pointerover", event => {
@@ -161,19 +192,35 @@ document.addEventListener("click", event => {
     if (themePicker && !themePicker.contains(event.target) && themeMenu && !themeMenu.hidden) {
         closeThemeMenu();
     }
+
+    if (mobileNavigation.matches && navMenu && menuToggle
+        && !navMenu.contains(event.target) && !menuToggle.contains(event.target)
+        && menuToggle.getAttribute("aria-expanded") === "true") {
+        setMenuOpen(false);
+    }
 });
 
 document.addEventListener("keydown", event => {
     if (event.key === "Escape" && themeMenu && !themeMenu.hidden) {
         closeThemeMenu(true);
     }
+
+    if (event.key === "Escape" && menuToggle?.getAttribute("aria-expanded") === "true") {
+        setMenuOpen(false);
+        menuToggle.focus();
+    }
 });
 
 setTheme("light");
+updateNavigationLayout();
+mobileNavigation.addEventListener("change", updateNavigationLayout);
 
 window.addEventListener("popstate", () => {
     const page = location.hash.slice(1) || "home";
     setCurrentPage(page);
+    if (mobileNavigation.matches) {
+        setMenuOpen(false);
+    }
     window.loadPage(page);
 });
 
