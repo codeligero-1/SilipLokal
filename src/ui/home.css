@@ -69,7 +69,8 @@
   line-height: 1.65;
 }
 
-#app .home-intro .button {
+/*TODO: Make the animations throughout all the buttons consistent and smooth */
+#app .home-intro .button { 
   width: auto;
   padding: 0.7rem 1rem;
   border: 0;
@@ -160,6 +161,7 @@
   object-fit: contain;
 }
 
+/* TODO: make the photo inside the carousel smaller in heigh and make it more responsive*/
 .featured-carousel {
   position: relative;
   width: min(100%, 54rem);

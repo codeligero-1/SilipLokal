@@ -36,6 +36,7 @@
   gap: clamp(1rem, 2.5vw, 1.6rem);
 }
 
+/*TODO: make the image containers more responsive */
 .about-image {
   display: block;
   width: 100%;

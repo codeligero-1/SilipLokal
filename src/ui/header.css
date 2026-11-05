@@ -28,6 +28,7 @@
   display: none;
 }
 
+/*TODO: make the navigation links more responsive to screen size*/
 #header .site-nav a {
   color: inherit;
   text-decoration: none;
