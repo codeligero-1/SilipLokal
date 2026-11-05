@@ -1,86 +1,280 @@
-/* login page */
-
-.login-page {
-  background: #ffe8d6; 
+body.is-auth-page {
+  --auth-background: #f5f4f1;
+  --auth-ink: #292825;
+  --auth-muted: #77756f;
+  --auth-field: #e9e8e5;
+  --auth-line: #d3d1cc;
+  color: var(--auth-ink);
+  background: var(--auth-background);
+  font-family: Georgia, "Times New Roman", serif;
 }
 
-.login-section {
-  max-width: 400px;
-  margin: 40px auto;
-  padding: 24px;
-  background: #ffffff; 
-  border: 1px solid #f3c9a8;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.login-section h2 {
-  text-align: center;
-  margin-bottom: 24px;
-  font-size: 24px;
-}
-
-.login-section input {
+body.is-auth-page #app {
   width: 100%;
-  padding: 8px;
-  margin: 4px 0 12px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  padding: clamp(1.25rem, 3.2vw, 3rem) clamp(1.25rem, 6vw, 6rem);
 }
 
-.login-section button {
+.auth-page {
+  width: min(100%, 1440px);
+  min-height: calc(100vh - clamp(2.5rem, 6.4vw, 6rem));
+  margin: 0 auto;
+}
+
+.auth-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: inherit;
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+.auth-brand img {
+  width: 2.4rem;
+  height: 2.4rem;
+  object-fit: contain;
+}
+
+.auth-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(20rem, 1fr);
+  align-items: center;
+  gap: clamp(3rem, 8vw, 8rem);
+  width: min(100%, 1190px);
+  margin: clamp(1.5rem, 3vw, 3rem) auto 0;
+}
+
+.auth-content {
+  width: min(100%, 31rem);
+  justify-self: center;
+}
+
+.auth-intro h1 {
+  margin: 0;
+  font-size: clamp(3.2rem, 6vw, 5.4rem);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 1.05;
+}
+
+.auth-intro p {
+  margin: 0.8rem 0 0;
+  color: var(--auth-muted);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+}
+
+.auth-panel {
+  margin-top: clamp(2.2rem, 4vw, 3.5rem);
+}
+
+.auth-panel h2 {
+  margin: 0 0 1.25rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+#app form.auth-form {
+  display: grid;
   width: 100%;
-  padding: 10px;
-  background: #f4a261;
+  max-width: none;
+  gap: 0.85rem;
+  margin: 0;
+}
+
+#app form.auth-form input {
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.55rem;
+  color: var(--auth-ink);
+  background: var(--auth-field);
+  font: 1rem Georgia, "Times New Roman", serif;
+}
+
+#app form.auth-form input::placeholder {
+  color: #77756f;
+  opacity: 1;
+}
+
+#app form.auth-form input:focus {
+  border-color: #77756f;
+  outline: 2px solid transparent;
+}
+
+#app form.auth-form .auth-primary-button {
+  justify-self: center;
+  min-width: 10.5rem;
+  min-height: 3rem;
+  margin-top: 0.4rem;
+  padding: 0.7rem 2rem;
+  border: 0;
+  border-radius: 999px;
   color: #fff;
-  border: none;
-  border-radius: 6px;
+  background: #55534f;
+  font: 1rem Georgia, "Times New Roman", serif;
+  letter-spacing: 0.04em;
   cursor: pointer;
+  transition: background-color 160ms ease, transform 160ms ease;
 }
 
-.login-page hr {
-  border: none;
-  border-top: 1px solid black;
-  margin: 24px auto;
-  width: 90%;
+#app form.auth-form .auth-primary-button:hover {
+  background: #393834;
+  transform: translateY(-1px);
 }
 
-/* signup page */
- /* trying to style na mag switch ang login page to signup page sa isa lng ka page or something */
-.sign-page {
-  background: #ffe8d6; 
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin: 1.35rem 0 1rem;
+  color: var(--auth-muted);
+  font-size: 0.9rem;
 }
 
-.signup-section {
-  max-width: 400px;
-  margin: 40px auto;
-  padding: 24px;
-  background: #ffffff; 
-  border: 1px solid #f3c9a8;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.auth-divider::before,
+.auth-divider::after {
+  height: 1px;
+  flex: 1;
+  background: var(--auth-line);
+  content: "";
 }
 
-.signup-section h2 {
+.auth-social-options {
+  display: grid;
+  gap: 0.7rem;
+}
+
+#app .auth-social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  width: 100%;
+  min-height: 2.9rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--auth-line);
+  border-radius: 0.5rem;
+  color: var(--auth-ink);
+  background: #fbfaf8;
+  font: 0.95rem Georgia, "Times New Roman", serif;
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+.auth-social-icon {
+  display: inline-grid;
+  width: 1.15rem;
+  height: 1.15rem;
+  place-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.auth-message,
+.auth-social-note {
+  min-height: 1.2em;
+  margin: 0.75rem 0 0;
+  color: #625f59;
+  font-size: 0.83rem;
+  line-height: 1.5;
   text-align: center;
-  margin-bottom: 24px;
-  font-size: 24px;
 }
 
-.signup-section input {
-  width: 100%;
-  padding: 8px;
-  margin: 4px 0 12px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+.auth-social-note {
+  margin-top: 0.5rem;
 }
 
-.signup-section button {
+.auth-switch {
+  margin: 1rem 0 0;
+  color: var(--auth-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.auth-switch a {
+  color: var(--auth-ink);
+  text-underline-offset: 0.18em;
+}
+
+.auth-image {
+  display: block;
   width: 100%;
-  padding: 10px;
-  background: #f4a261;
-  color: #fff;
-...
+  max-height: min(74vh, 52rem);
+  aspect-ratio: 4 / 5;
+  border-radius: 1.5rem;
+  background: #d8d8d8;
+  object-fit: cover;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+@media (max-width: 900px) {
+  .auth-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(17rem, 0.85fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .auth-image {
+    max-height: 68vh;
+  }
+}
+
+@media (max-width: 680px) {
+  body.is-auth-page #app {
+    padding: 1.25rem;
+  }
+
+  .auth-page {
+    min-height: calc(100vh - 2.5rem);
+  }
+
+  .auth-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .auth-content {
+    width: 100%;
+  }
+
+  .auth-intro h1 {
+    font-size: clamp(3rem, 14vw, 4rem);
+  }
+
+  .auth-panel {
+    margin-top: 2rem;
+  }
+
+  .auth-image {
+    width: min(100%, 23rem);
+    max-height: none;
+    align-self: center;
+  }
+}
+
+@media (max-width: 380px) {
+  body.is-auth-page #app {
+    padding: 1rem;
+  }
+
+  .auth-brand {
+    font-size: 1rem;
+  }
 }

@@ -1,15 +1,41 @@
-<section class="login-page">
-    <h2>Login</h2>
-    <form action="login" method="post">
-        <div>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+<section class="auth-page" data-auth-page aria-labelledby="auth-brand-title">
+    <a class="auth-brand" href="#home" data-page="home">
+        <img src="assets/logo.png" alt="" width="38" height="38">
+        <span>Siliplokal</span>
+    </a>
+
+    <div class="auth-layout">
+        <div class="auth-content">
+            <header class="auth-intro">
+                <h1 id="auth-brand-title">SilipLokal</h1>
+                <p>Lorem, Ipsum dolor sit Amet.</p>
+            </header>
+
+            <section class="auth-panel" aria-labelledby="auth-form-title">
+                <h2 id="auth-form-title">Sign in</h2>
+                <form class="auth-form" data-auth-form="login">
+                    <label class="visually-hidden" for="login-username">Username</label>
+                    <input id="login-username" name="username" type="text" placeholder="Username" autocomplete="username" required>
+                    <label class="visually-hidden" for="login-password">Password</label>
+                    <input id="login-password" name="password" type="password" placeholder="Password" autocomplete="current-password" required>
+                    <button class="auth-primary-button" type="submit">SIGN IN</button>
+                </form>
+
+                <div class="auth-divider" aria-hidden="true"><span>or</span></div>
+                <div class="auth-social-options" aria-label="Alternative sign-in options">
+                    <button class="auth-social-button" type="button" disabled title="Google sign-in is not configured">
+                        <span class="auth-social-icon" aria-hidden="true">G</span>Sign in with Google
+                    </button>
+                    <button class="auth-social-button" type="button" disabled title="Facebook sign-in is not configured">
+                        <span class="auth-social-icon" aria-hidden="true">f</span>Sign in with Facebook
+                    </button>
+                </div>
+                <p class="auth-social-note">Social sign-in is not configured yet.</p>
+                <p class="auth-message" data-auth-message role="status" aria-live="polite"></p>
+                <p class="auth-switch">Don't have an account? <a href="#signup" data-page="signup">Sign up here.</a></p>
+            </section>
         </div>
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <button type="submit">Login</button>
-    </form>
-    <a href="#signup" data-page="signup">Don't have an account? Sign up here.</a>
+
+        <img class="auth-image" src="assets/auth-image-placeholder.svg" alt="Neutral image placeholder" width="640" height="800">
+    </div>
 </section>

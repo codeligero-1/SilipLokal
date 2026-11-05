@@ -45,6 +45,11 @@ function moveNavIndicator(link) {
 }
 
 function setCurrentPage(page) {
+    const isAuthPage = page === "login" || page === "signup";
+    document.body.classList.toggle("is-auth-page", isAuthPage);
+    document.getElementById("header").hidden = isAuthPage;
+    document.getElementById("footer").hidden = isAuthPage;
+
     if (!navLinks) {
         return;
     }
@@ -62,7 +67,7 @@ function setCurrentPage(page) {
         }
     });
 
-    const isAccountPage = page === "login" || page === "signup";
+    const isAccountPage = isAuthPage;
     accountLink?.classList.toggle("active", isAccountPage);
 
     if (isAccountPage) {

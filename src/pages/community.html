@@ -1,6 +1,70 @@
-<section class="community-page">
-    <h2>Community and Reviews</h2>
-    <p>Welcome to the SilipLokal community! Here, you can share your experiences with local brands, read reviews from other users, and connect with like-minded individuals who are passionate about supporting local businesses.</p>
-    <div class="community-section"></div>
-    <!--community content will be added through js-->
+<section class="community-page" data-community-page aria-labelledby="community-title">
+    <header class="community-header">
+        <h1 id="community-title">Community and Reviews</h1>
+    </header>
+
+    <div class="review-toolbar">
+        <div class="review-filters" data-review-filters role="group" aria-label="Filter reviews by rating"></div>
+        <label class="review-search">
+            <span aria-hidden="true">⌕</span>
+            <input type="search" data-review-search placeholder="Search reviews, makers, or keywords" aria-label="Search reviews, makers, or keywords">
+        </label>
+    </div>
+
+    <div class="review-grid" data-review-grid aria-live="polite"></div>
+    <p class="review-system-note">Reviews and account-level voting will appear when the SilipLokal review service is connected.</p>
+
+    <aside class="share-review-banner" aria-labelledby="share-review-title">
+        <span class="share-review-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4Z"></path></svg>
+        </span>
+        <div class="share-review-copy">
+            <h2 id="share-review-title">Share your experience</h2>
+            <p>Help other shoppers discover what works, what feels handmade, and which local sellers are worth returning to.</p>
+        </div>
+        <button class="write-review-button" type="button" data-open-review>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4Z"></path></svg>
+            <span>Write a review</span>
+        </button>
+    </aside>
+
+    <dialog class="review-submit-dialog" data-review-dialog aria-labelledby="review-form-title">
+        <form class="review-dialog-close-form" method="dialog">
+            <button type="submit" class="review-dialog-close" aria-label="Close review form">×</button>
+        </form>
+        <h2 id="review-form-title">Write a review</h2>
+        <p class="review-form-notice">Posting requires a verified account and a registered SilipLokal business. This preview has no connected authentication or review service; your review will not be submitted or stored.</p>
+        <form data-review-form novalidate>
+            <label for="review-business">Business</label>
+            <input id="review-business" name="business" type="search" list="review-business-options" placeholder="Search registered businesses" required>
+            <datalist id="review-business-options"></datalist>
+
+            <fieldset class="review-rating-fieldset">
+                <legend>Your rating</legend>
+                <div class="review-rating-picker" data-rating-picker role="radiogroup" aria-label="Select a rating from 1 to 5 stars">
+                    <button type="button" role="radio" data-rating="1" aria-checked="false" aria-label="1 star">★</button>
+                    <button type="button" role="radio" data-rating="2" aria-checked="false" aria-label="2 stars">★</button>
+                    <button type="button" role="radio" data-rating="3" aria-checked="false" aria-label="3 stars">★</button>
+                    <button type="button" role="radio" data-rating="4" aria-checked="false" aria-label="4 stars">★</button>
+                    <button type="button" role="radio" data-rating="5" aria-checked="false" aria-label="5 stars">★</button>
+                </div>
+                <input type="hidden" name="rating" data-rating-value>
+            </fieldset>
+
+            <label for="review-title">Review title</label>
+            <input id="review-title" name="title" type="text" maxlength="80" required>
+
+            <label for="review-description">Your experience</label>
+            <textarea id="review-description" name="description" rows="5" maxlength="1200" required></textarea>
+            <span class="review-character-count" data-character-count>0 / 1200</span>
+
+            <label for="review-images">Photos (optional)</label>
+            <input id="review-images" name="images" type="file" accept="image/*" multiple>
+            <div class="review-image-preview" data-image-preview aria-live="polite"></div>
+
+            <p class="review-form-message" data-review-form-message role="status" aria-live="polite"></p>
+            <a class="review-signin-link" href="#login" data-page="login">Go to Log In</a>
+            <button class="review-submit-button" type="submit">Submit review</button>
+        </form>
+    </dialog>
 </section>
