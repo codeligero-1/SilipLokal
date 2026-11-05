@@ -1,13 +1,3 @@
-/*about page*/
-.about-page {
-  background: #ffe8d6; 
-}
-.about-page h1 {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 32px;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -54,7 +44,8 @@ body {
 }
 
 #footer a:hover {
-  color: #76665a;
+  color: var(--text-color);
+  opacity: 1;
 }
 
 #app {
@@ -169,7 +160,8 @@ body {
   width: 2rem;
   height: 2rem;
   place-items: center;
-  color: #77716c;
+  color: var(--text-color);
+  opacity: 0.72;
   transition: color 160ms ease, transform 160ms ease;
 }
 
@@ -207,7 +199,8 @@ body {
 .footer-links a,
 .footer-contact a,
 .footer-contact p {
-  color: #77716c;
+  color: var(--text-color);
+  opacity: 0.76;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 0.95rem;
   line-height: 1.4;
@@ -217,6 +210,15 @@ body {
 .footer-contact {
   justify-items: end;
   text-align: right;
+}
+
+.footer-copyright {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--text-color);
+  font-size: 0.8rem;
+  opacity: 0.65;
+  text-align: center;
 }
 
 @media (max-width: 760px) {
