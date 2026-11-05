@@ -154,8 +154,19 @@ body {
 }
 
 #header .site-nav a:hover,
+#header .site-nav a:focus-visible {
+  text-decoration: none;
+}
+
 #footer a:hover {
   text-decoration: underline;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible,
+.account-link:hover,
+.account-link:focus-visible {
+  text-decoration: none;
 }
 
 .brand {
@@ -179,14 +190,14 @@ body {
 
 .nav-links {
   display: flex;
-  justify-self: stretch;
-  width: 100%;
+  justify-self: center;
+  width: fit-content;
   max-width: 100%;
   min-width: 0;
   align-items: center;
   justify-content: space-between;
-  gap: clamp(0.1rem, 0.35vw, 0.35rem);
-  padding: 0.45rem;
+  gap: clamp(0.25rem, 0.5vw, 0.5rem);
+  padding: 0.5rem;
   border: 1px solid var(--border-color);
   border-radius: 999px;
   background: var(--island-background);
@@ -200,7 +211,7 @@ body {
   min-width: 0;
   align-items: center;
   justify-content: center;
-  gap: clamp(0.1rem, 0.35vw, 0.35rem);
+  gap: clamp(0.2rem, 0.4vw, 0.4rem);
 }
 
 .nav-links a,
@@ -208,7 +219,7 @@ body {
 .theme-toggle {
   position: relative;
   z-index: 1;
-  padding: 0.7rem clamp(0.6rem, 1.15vw, 1rem);
+  padding: 0.7rem clamp(0.65rem, 1.1vw, 1rem);
   border: 0;
   border-radius: 999px;
   color: inherit;
@@ -222,7 +233,6 @@ body {
   background: var(--island-hover);
 }
 
-.nav-links a:hover,
 .theme-toggle:hover,
 .account-link:hover {
   transform: translateY(-1px);
@@ -230,6 +240,10 @@ body {
 
 .nav-links a {
   font-size: clamp(0.9rem, 1vw, 1.05rem);
+}
+
+.page-links:not(.is-hovering) a[aria-current="page"] {
+  background: var(--island-hover);
 }
 
 .nav-indicator {
@@ -243,7 +257,7 @@ body {
   background: var(--island-hover);
   opacity: 0;
   pointer-events: none;
-  transition: width 220ms ease, height 220ms ease, transform 220ms ease, top 220ms ease, opacity 160ms ease;
+  transition: width 220ms ease, transform 220ms ease, opacity 120ms ease;
 }
 
 .theme-picker {
@@ -425,8 +439,9 @@ body {
   }
 
   .nav-links {
+    justify-self: stretch;
     gap: 0;
-    padding: 0.3rem;
+    padding: 0.4rem;
   }
 
   .page-links {
@@ -471,6 +486,7 @@ body {
   }
 
   .nav-links {
+    width: 100%;
     min-width: 0;
     gap: 0;
     padding: 0.25rem;
@@ -502,6 +518,10 @@ body {
   .account-link {
     padding: 0.62rem clamp(0.5rem, 1.6vw, 0.8rem);
     font-size: clamp(0.72rem, 2.6vw, 0.9rem);
+  }
+
+  .theme-menu {
+    min-width: 9.5rem;
   }
 }
 
