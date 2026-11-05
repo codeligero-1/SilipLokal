@@ -103,6 +103,311 @@
   height: 40%;
 }
 
+.featured-brands {
+  width: calc(100% + clamp(2rem, 8vw, 6rem));
+  margin: 2rem calc(clamp(1rem, 4vw, 3rem) * -1) 0;
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1rem, 4vw, 3rem);
+  background: var(--page-background, #fffaf6);
+}
+
+.featured-brands > h2 {
+  margin: 0 0 clamp(1.5rem, 3vw, 2rem);
+  color: var(--text-color, #2f2924);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.brand-gallery {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: clamp(0.5rem, 1.5vw, 1.1rem);
+  width: min(100%, 50rem);
+  margin: 0 auto;
+}
+
+.brand-logo-button {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 1;
+  place-items: center;
+  padding: 0.35rem;
+  overflow: hidden;
+  border: 2px solid transparent;
+  border-radius: 0.65rem;
+  background: var(--island-hover, #e4e1dd);
+  cursor: pointer;
+  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.brand-logo-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(47, 41, 36, 0.12);
+}
+
+.brand-logo-button.is-active {
+  border-color: #9e8d7e;
+  background: var(--island-background, #f0eeeb);
+}
+
+.brand-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.35rem;
+  object-fit: contain;
+}
+
+.featured-carousel {
+  position: relative;
+  width: min(100%, 54rem);
+  margin: clamp(3rem, 7vw, 4.5rem) auto 0;
+  padding: 0 clamp(2.25rem, 5vw, 3rem);
+}
+
+.featured-card {
+  position: relative;
+  min-height: 21rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem) 3.75rem;
+  overflow: hidden;
+  border-radius: clamp(1.5rem, 4vw, 2.5rem);
+  background: var(--island-hover, #e4e1dd);
+}
+
+.featured-slide {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 180ms ease, transform 220ms ease;
+}
+
+.featured-slide.is-changing {
+  opacity: 0.25;
+  transform: translateX(0.5rem);
+}
+
+.featured-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 1.25rem;
+  background: var(--island-background, #f0eeeb);
+  object-fit: cover;
+}
+
+.featured-details {
+  min-width: 0;
+  color: var(--text-color, #2f2924);
+}
+
+.featured-category {
+  margin: 0 0 0.5rem;
+  color: var(--text-color, #2f2924);
+  opacity: 0.72;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.featured-name {
+  margin: 0 0 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.featured-description {
+  margin: 0;
+  color: var(--text-color, #2f2924);
+  opacity: 0.76;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(0.95rem, 1.3vw, 1.05rem);
+  line-height: 1.65;
+}
+
+#app .featured-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  margin-top: 1.25rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid #b9a99a;
+  border-radius: 999px;
+  color: var(--text-color, #2f2924);
+  background: var(--page-background, #fffaf6);
+  font: inherit;
+  text-decoration: none;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+#app .featured-link:hover {
+  background: var(--island-background, #f0eeeb);
+  transform: translateY(-1px);
+}
+
+.carousel-arrow {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  padding: 0.55rem;
+  border: 0;
+  border-radius: 50%;
+  color: var(--text-color, #2f2924);
+  background: var(--island-hover, #e4e1dd);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.carousel-arrow:hover {
+  background: var(--island-background, #f0eeeb);
+  box-shadow: 0 0.35rem 0.9rem rgba(47, 41, 36, 0.14);
+  transform: translateY(-50%) scale(1.06);
+}
+
+.carousel-arrow svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.carousel-previous {
+  left: 0;
+}
+
+.carousel-next {
+  right: 0;
+}
+
+.carousel-pagination {
+  position: absolute;
+  right: 0;
+  bottom: 1.25rem;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.carousel-dot {
+  width: 0.65rem;
+  height: 0.65rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--page-background, #fffaf6);
+  cursor: pointer;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.carousel-dot:hover {
+  transform: scale(1.2);
+}
+
+.carousel-dot[aria-current="true"] {
+  background: var(--text-color, #2f2924);
+  transform: scale(1.2);
+}
+
+.brand-logo-button:focus-visible,
+.carousel-arrow:focus-visible,
+.carousel-dot:focus-visible,
+#app .featured-link:focus-visible {
+  outline: 3px solid #5b7f95;
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  .brand-gallery {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding: 0.25rem 0 0.75rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+  }
+
+  .brand-logo-button {
+    flex: 0 0 4.5rem;
+    scroll-snap-align: start;
+  }
+
+  .featured-carousel {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 0;
+  }
+
+  .featured-card {
+    min-height: 0;
+    padding: 1rem 1rem 3.75rem;
+  }
+
+  .featured-slide {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  .featured-image {
+    width: min(100%, 20rem);
+    max-height: 18rem;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+
+  .featured-details {
+    padding: 0 0.25rem;
+  }
+
+  .carousel-arrow {
+    top: 9.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: rgba(255, 250, 246, 0.92);
+    transform: translateY(-50%);
+  }
+
+  .carousel-previous {
+    left: 1.5rem;
+  }
+
+  .carousel-next {
+    right: 1.5rem;
+  }
+
+  .carousel-arrow:hover {
+    transform: translateY(-50%) scale(1.05);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-logo-button,
+  .featured-slide,
+  #app .featured-link,
+  .carousel-arrow,
+  .carousel-dot {
+    scroll-behavior: auto;
+    transition-duration: 0.01ms;
+  }
+}
+
 @media (max-width: 520px) {
   .home .first-section {
     margin-top: -1.5rem;

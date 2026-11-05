@@ -19,11 +19,19 @@
             <div class="category-card"></div>
         </div>
     </div>
-    <div class="second-section">
-        <h2>Take a Peek at Local Brands!</h2>
-        <!-- add images of different categories -->
-        <!-- add image carousel with text -->
-    </div>
+    <section class="second-section featured-brands" id="featured-brands" data-featured-brands aria-labelledby="featured-brands-title">
+        <h2 id="featured-brands-title">Take a Peek at Local Brands!</h2>
+        <div class="brand-gallery" data-brand-gallery role="group" aria-label="Choose a featured brand"></div>
+        <div class="featured-carousel" data-featured-carousel role="region" aria-label="Featured local brands">
+            <button class="carousel-arrow carousel-previous" type="button" data-carousel-previous aria-label="Previous featured brand">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7M8 12h13"></path></svg>
+            </button>
+            <div class="featured-card" data-featured-card aria-live="polite"></div>
+            <button class="carousel-arrow carousel-next" type="button" data-carousel-next aria-label="Next featured brand">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7m7-7H3"></path></svg>
+            </button>
+        </div>
+    </section>
     <div class="third-section">
         <h2>Popular</h2>
         <!-- add images of popular local brands -->

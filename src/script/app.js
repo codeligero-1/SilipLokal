@@ -37,6 +37,7 @@ async function loadPage(page) {
 
         if (requestId === latestRequest) {
             app.innerHTML = content;
+            document.dispatchEvent(new CustomEvent("page:loaded", { detail: { page } }));
         }
     } catch (error) {
         if (requestId === latestRequest) {
