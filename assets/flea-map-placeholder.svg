@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560">
+  <rect width="1200" height="560" fill="#e7e5df"/>
+  <path d="M0 72 240 0h150L140 560H0Zm430-72h105L305 560H195Zm400 0h120L700 560H578Zm275 0h95v170L970 560H840Z" fill="#d9e1d5"/>
+  <path d="M900 0c-32 84-10 146 40 210s65 124 31 189c-26 49-10 105 13 161h216V0Z" fill="#c9dce0"/>
+  <path d="M-20 440 1220 160M-40 188 1180 470M240-20l370 610M720-20 390 590M1000-20 790 590" fill="none" stroke="#fffaf2" stroke-width="42" stroke-linecap="round"/>
+  <path d="M-20 440 1220 160M-40 188 1180 470M240-20l370 610M720-20 390 590M1000-20 790 590" fill="none" stroke="#d4cfc5" stroke-width="3" stroke-linecap="round"/>
+  <path d="M-20 286 1210 352M440-20 500 590M860-20 630 590" fill="none" stroke="#f8f5ee" stroke-width="24" stroke-linecap="round"/>
+  <path d="M-20 286 1210 352M440-20 500 590M860-20 630 590" fill="none" stroke="#d8d2c8" stroke-width="2" stroke-linecap="round"/>
+  <g fill="#c6d1bc">
+    <path d="M52 34h146v94H52zM328 70h124v92H328zM628 28h120v106H628zM102 354h116v106H102zM548 394h126v118H548zM748 72h92v76h-92zM360 380h110v78H360z"/>
+  </g>
+  <g fill="#8f9b88" font-family="Arial,sans-serif" font-size="18">
+    <text x="74" y="88">COMMUNITY PARK</text>
+    <text x="345" y="122">LOCAL MARKET</text>
+    <text x="647" y="87">RIVERSIDE GREEN</text>
+    <text x="110" y="407">TOWN PLAZA</text>
+    <text x="570" y="454">NEIGHBORHOOD</text>
+  </g>
+  <g fill="none" stroke="#c5b7a5" stroke-width="2" opacity=".8">
+    <path d="M25 242h120m-18 17h95m241-68h86m52 20h82m142 22h102m-816 96h70m162 45h92m420-44h90"/>
+    <path d="M285 20v60m24 22v66m285-130v70m29 211v62m245-280v64m-41 309v38"/>
+  </g>
+  <g>
+    <path d="M276 248c0-23 18-41 41-41s41 18 41 41c0 31-41 72-41 72s-41-41-41-72Z" fill="#967f6d"/>
+    <circle cx="317" cy="247" r="13" fill="#fffaf6"/>
+    <path d="M752 309c0-23 18-41 41-41s41 18 41 41c0 31-41 72-41 72s-41-41-41-72Z" fill="#967f6d"/>
+    <circle cx="793" cy="308" r="13" fill="#fffaf6"/>
+    <path d="M1002 213c0-23 18-41 41-41s41 18 41 41c0 31-41 72-41 72s-41-41-41-72Z" fill="#967f6d"/>
+    <circle cx="1043" cy="212" r="13" fill="#fffaf6"/>
+  </g>
+  <g fill="#756b60" font-family="Georgia,serif" font-size="18">
+    <text x="228" y="344">MARKET</text>
+    <text x="755" y="405">MARKET</text>
+    <text x="1008" y="304">MARKET</text>
+  </g>
+</svg>

@@ -1,11 +1,35 @@
-<section class="flea-page">
-    <div class="location">
-        <h1>Flea Markets</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-        <!--embed google maps-->
-    </div>
-    <div class="flea-markets">
-        <!-- Flea market listings will be inserted here -->
+<section class="flea-page" data-flea-page aria-labelledby="flea-title">
+    <header class="flea-intro">
+        <h1 id="flea-title">Flea Markets</h1>
+        <p>Discover flea markets and community gatherings around you. SilipLokal is preparing a place to explore local markets, meet independent sellers, and find unique goods.</p>
+    </header>
+
+    <div class="flea-map" role="img" aria-label="Illustrated map preview with local streets, parks, and market location pins">
+        <img src="assets/flea-map-placeholder.svg" alt="">
+        <aside class="flea-location-card" data-location-card aria-labelledby="location-card-title" hidden>
+            <button class="location-card-close" type="button" data-location-close aria-label="Dismiss location search introduction">×</button>
+            <h2 id="location-card-title">Explore<br>Hidden Fleas<br>Near You!</h2>
+            <form class="location-search-form" data-location-form novalidate>
+                <label class="location-search-field">
+                    <span class="location-search-icon" aria-hidden="true">⌕</span>
+                    <input type="search" data-location-input placeholder="Search location" aria-label="Search a city, municipality, barangay, or location">
+                </label>
+                <button class="location-search-submit" type="submit">Search</button>
+                <p class="location-search-message" data-location-message role="status" aria-live="polite"></p>
+            </form>
+        </aside>
     </div>
 
+    <section class="upcoming-markets" aria-labelledby="upcoming-markets-title">
+        <h2 id="upcoming-markets-title">Upcoming Flea Markets!</h2>
+        <p class="flea-listing-note">Example listings only — event details have not been confirmed.</p>
+        <div class="flea-event-grid" data-flea-event-grid></div>
+    </section>
+
+    <dialog class="flea-event-dialog" data-event-dialog aria-labelledby="event-dialog-title">
+        <form method="dialog" class="event-dialog-close-form">
+            <button type="submit" class="event-dialog-close" aria-label="Close event details">×</button>
+        </form>
+        <div data-event-dialog-content></div>
+    </dialog>
 </section>

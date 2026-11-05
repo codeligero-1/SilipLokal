@@ -1,20 +1,44 @@
-<section class="catalogue-page">
-    <div>
-        <h1>SilipLokal Catalogue</h1>
-        <img src="./assets/logo.png" alt="SilipLokal Logo" class="logo">
-        <h3>Recommended Shops</h3>
-        <!--shop overviews-->
-    </div>
-    <div>
-        <h3>Local Cafes</h3>
-        <!--shop overviews-->
-    </div>
-    <div>
-        <h3>Local Anik-Anik Shops</h3>
-        <!--shop overviews-->
-    </div>
-    <div>
-        <h3>Local Creative Services</h3>
-        <!--shop overviews-->
-    </div>
+<section class="catalogue-page" data-catalogue aria-labelledby="catalogue-title">
+    <header class="catalogue-header">
+        <h1 id="catalogue-title">Siliplokal Catalogue</h1>
+    </header>
+
+    <nav class="catalogue-categories" data-catalogue-categories aria-label="Filter recommended shops by category"></nav>
+
+    <section class="catalogue-recommended" aria-labelledby="recommended-title">
+        <h2 id="recommended-title">Recommended Shops</h2>
+        <div class="recommended-grid" data-recommended-grid></div>
+        <nav class="catalogue-pagination" data-catalogue-pagination aria-label="Recommended shop pages"></nav>
+    </section>
+
+    <section class="catalogue-category-section" id="local-cafes" aria-labelledby="cafes-title" data-category-section="cafes">
+        <h2 id="cafes-title">Local Cafes</h2>
+        <div class="category-business-grid" data-category-grid="cafes"></div>
+        <button class="catalogue-view-more" type="button" data-view-more="cafes" aria-expanded="false">
+            <span>View More</span><span class="view-more-arrow" aria-hidden="true">›</span>
+        </button>
+    </section>
+
+    <section class="catalogue-category-section" id="local-anik-anik" aria-labelledby="anik-anik-title" data-category-section="anik-anik">
+        <h2 id="anik-anik-title">Local Anik-Anik Shops</h2>
+        <div class="category-business-grid" data-category-grid="anik-anik"></div>
+        <button class="catalogue-view-more" type="button" data-view-more="anik-anik" aria-expanded="false">
+            <span>View More</span><span class="view-more-arrow" aria-hidden="true">›</span>
+        </button>
+    </section>
+
+    <section class="catalogue-category-section" id="local-creative-services" aria-labelledby="creative-services-title" data-category-section="creative-services">
+        <h2 id="creative-services-title">Local Creative Services</h2>
+        <div class="category-business-grid" data-category-grid="creative-services"></div>
+        <button class="catalogue-view-more" type="button" data-view-more="creative-services" aria-expanded="false">
+            <span>View More</span><span class="view-more-arrow" aria-hidden="true">›</span>
+        </button>
+    </section>
+
+    <dialog class="catalogue-shop-dialog" data-shop-dialog aria-labelledby="shop-dialog-title">
+        <form method="dialog" class="shop-dialog-close-form">
+            <button type="submit" class="shop-dialog-close" aria-label="Close shop details">×</button>
+        </form>
+        <div data-shop-dialog-content></div>
+    </dialog>
 </section>

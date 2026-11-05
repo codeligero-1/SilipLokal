@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600">
+  <rect width="960" height="600" fill="#d9d8d5"/>
+  <rect y="388" width="960" height="212" fill="#c6c3be"/>
+  <path d="M75 132h810v264H75z" fill="#ebe8e2"/>
+  <path d="M48 174 480 48l432 126v42H48z" fill="#aaa59e"/>
+  <path d="M111 216h738v172H111z" fill="#d7d2ca"/>
+  <path d="M140 230h220v157H140zm247 0h220v157H387zm247 0h220v157H634z" fill="#f2eee8"/>
+  <path d="M140 230h220v36H140zm247 0h220v36H387zm247 0h220v36H634z" fill="#b9afa2"/>
+  <path d="M176 266v121m72-121v121m75-121v121m100-121v121m73-121v121m76-121v121m104-121v121m70-121v121" stroke="#cbc5bb" stroke-width="7"/>
+  <path d="M190 317h120m119-4h120m120 6h120" stroke="#978b7d" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="248" cy="300" r="13" fill="#b1b8aa"/>
+  <circle cx="456" cy="300" r="13" fill="#c5b29d"/>
+  <circle cx="706" cy="300" r="13" fill="#aeb7ba"/>
+  <path d="M220 390c0-25 20-45 45-45s45 20 45 45m169 0c0-25 20-45 45-45s45 20 45 45m164 0c0-25 20-45 45-45s45 20 45 45" fill="none" stroke="#827970" stroke-width="9"/>
+  <path d="M123 463h714" stroke="#b1a99e" stroke-width="4" stroke-dasharray="14 14"/>
+  <text x="480" y="540" fill="#6d665e" font-family="Georgia,serif" font-size="28" text-anchor="middle">Illustrative market placeholder</text>
+</svg>
