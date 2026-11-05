@@ -5,24 +5,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="src/ui/style.css">
+        <link rel="stylesheet" href="src/ui/home.css">
         <title>SilipLokal</title>
     </head>
     <body>
         <!-- Header -->
         <header id="header">
-            <nav>
-                <img src="../images/logo.png" alt="SilipLokal Logo" class="logo">
-                <a href="#home" data-page="home">SilipLokal</a>
-                <a href="#home" data-page="home">Home</a>
-                <a href="#aboutus" data-page="about">About</a>
-                <a href="#catalogue" data-page="catalogue">Catalogue</a>
-                <a href="#flea" data-page="flea">Flea Markets</a>
-                <a href="#community" data-page="community">Community</a>
-                <select id="theme">
-                    <option value="light">Light Mode</option>
-                    <option value="dark">Dark Mode</option>
-                </select>
-                <a href="#login" data-page="login">Login</a>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a class="brand" href="#home" data-page="home">
+                    <img src="assets/logo.png" alt="SilipLokal Logo" class="logo">
+                    <span class="brand-mark" aria-hidden="true">S</span>
+                    <span>SilipLokal</span>
+                </a>
+                <div class="nav-links">
+                    <div class="page-links">
+                        <span class="nav-indicator" aria-hidden="true"></span>
+                        <a href="#home" data-page="home">Home</a>
+                        <a href="#about" data-page="about">About Us</a>
+                        <a href="#catalogue" data-page="catalogue">Catalogue</a>
+                        <a href="#flea" data-page="flea">Flea Markets</a>
+                        <a href="#community" data-page="community">Community</a>
+                    </div>
+                    <div class="theme-picker">
+                        <button class="theme-toggle" id="themeToggle" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="themeMenu">
+                            <span id="themeLabel">Light mode</span>
+                            <span class="theme-chevron" aria-hidden="true"></span>
+                        </button>
+                        <div class="theme-menu" id="themeMenu" role="listbox" aria-label="Color theme" hidden>
+                            <button type="button" role="option" data-theme-option="light" aria-selected="true">Light mode</button>
+                            <button type="button" role="option" data-theme-option="dark" aria-selected="false">Dark mode</button>
+                        </div>
+                    </div>
+                </div>
+                <a class="account-link" href="#signup" data-page="signup">Sign up/Log in</a>
             </nav>
         </header>
         
@@ -42,11 +57,11 @@
         <footer id="footer">
             <div>
                 <p>SilipLokal</p>
-                <img src="fb.png" alt="facebook" class="fb"><a href="https://www.facebook.com/SilipLokal" target="_blank"></a>
-                <img src="ig.png" alt="instagram" class="ig"><a href="https://www.instagram.com/SilipLokal" target="_blank"></a>
-                <img src="email.png" alt="email" class="email"><a href="mailto:info@siliplokal.com"></a>
+                <img src="../assets/fb.png" alt="facebook" class="fb"><a href="https://www.facebook.com/SilipLokal" target="_blank"></a>
+                <img src="../assets/ig.png" alt="instagram" class="ig"><a href="https://www.instagram.com/SilipLokal" target="_blank"></a>
+                <img src="../assets/email.png" alt="email" class="email"><a href="mailto:info@siliplokal.com"></a>
             </div>
-                <p>&copy; 2026 SilipLokal. All rights reserved.</p>
+            <p>&copy; 2026 SilipLokal. All rights reserved.</p>
             <div>
                 <ul>
                     <li><a href="faq.html">FAQs</a></li>
@@ -62,6 +77,6 @@
             </div>
         </footer>
 
-        <script src="script/app.js"></script>
+        <script src="src/script/app.js"></script>
     </body>
 </html>

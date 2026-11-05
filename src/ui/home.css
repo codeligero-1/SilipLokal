@@ -1,0 +1,140 @@
+.home .first-section {
+  width: calc(100% + clamp(2rem, 8vw, 6rem));
+  margin: -2rem calc(clamp(1rem, 4vw, 3rem) * -1) 0;
+  padding: 0 0 2rem;
+  overflow: hidden;
+}
+
+.feature-strip {
+  display: flex;
+  gap: 0.75rem;
+  width: max-content;
+  margin: 0 0 1.5rem;
+  transform: translateX(-3%);
+}
+
+.feature-card,
+.category-card {
+  position: relative;
+  flex: 0 0 auto;
+  overflow: hidden;
+  background: #e9e7e4;
+}
+
+.feature-card {
+  width: clamp(14rem, 27vw, 20rem);
+  height: clamp(7rem, 13vw, 10rem);
+  border-radius: 1.5rem;
+}
+
+.feature-card::before,
+.category-card::before {
+  position: absolute;
+  inset: 14%;
+  border: 1px solid #c8c4bf;
+  border-radius: 0.9rem;
+  content: "";
+}
+
+.feature-card::after,
+.category-card::after {
+  position: absolute;
+  right: 12%;
+  bottom: 20%;
+  left: 12%;
+  height: 45%;
+  background: linear-gradient(150deg, transparent 49%, #c8c4bf 50%, #c8c4bf 51%, transparent 52%);
+  content: "";
+}
+
+.home-intro {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  text-align: center;
+}
+
+.home-intro h1 {
+  margin: 0 0 0.5rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.8rem, 8vw, 5.5rem);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+}
+
+.home-intro p {
+  margin: 0 auto 1.75rem;
+  color: #77716c;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.65;
+}
+
+#app .home-intro .button {
+  width: auto;
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 0.4rem;
+  color: inherit;
+  background: #e9e7e4;
+  font-family: Georgia, "Times New Roman", serif;
+  text-align: center;
+}
+
+.category-strip {
+  display: flex;
+  justify-content: center;
+  gap: clamp(0.75rem, 2.5vw, 1.75rem);
+  margin: 2rem auto 0;
+  padding: 0 1rem;
+}
+
+.category-card {
+  width: clamp(5rem, 13vw, 8rem);
+  aspect-ratio: 1;
+  border-radius: 0.35rem;
+}
+
+.category-card::before {
+  border-radius: 0.55rem;
+}
+
+.category-card::after {
+  bottom: 16%;
+  height: 40%;
+}
+
+@media (max-width: 520px) {
+  .home .first-section {
+    margin-top: -1.5rem;
+  }
+
+  .feature-strip {
+    margin-bottom: 1.25rem;
+  }
+
+  .feature-card {
+    width: 70vw;
+    height: 34vw;
+    max-height: 8rem;
+  }
+
+  .home-intro {
+    padding: 0 1rem;
+  }
+
+  .home-intro p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .category-strip {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.5rem;
+    padding: 0 1rem;
+  }
+
+  .category-card {
+    width: 100%;
+  }
+}
